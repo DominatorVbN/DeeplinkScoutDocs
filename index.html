@@ -3,79 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeeplinkScout - Test and Manage Deeplinks</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            line-height: 1.6;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        .download-btn {
-            display: inline-block;
-            background: #007AFF;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            margin: 10px;
-        }
-        .code-block {
-            background: #f5f5f7;
-            padding: 20px;
-            border-radius: 8px;
-            font-family: 'SF Mono', Monaco, monospace;
-        }
-    </style>
+    <title>DeeplinkScout - Test, organize, and launch deeplinks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-    <div class="header">
-        <h1>DeeplinkScout</h1>
-        <p>Test and manage deeplinks for iOS and macOS development</p>
-
-        <a href="https://github.com/DominatorVbN/DeeplinkScoutApp/releases/latest" class="download-btn">
-            Download Latest
-        </a>
-    </div>
-
-    <div>
-        <h2>Install via Homebrew</h2>
-        <div class="code-block">
-            <pre>brew tap DominatorVbN/DominatorVbN
-brew install deeplinkscout</pre>
+    <nav>
+        <div class="container nav-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-badge"></span>
+                DeeplinkScout
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#screens">Screens</a>
+                <a href="#install">Install</a>
+                <a href="features.html">Request Features</a>
+                <a href="report.html">Report Issue</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </div>
-    </div>
+    </nav>
 
-    <div>
-        <h2>Features</h2>
-        <ul>
-            <li>Test deeplinks on simulators and physical devices</li>
-            <li>Organize deeplinks into collections</li>
-            <li>Export and share deeplink collections</li>
-            <li>Automatic updates via Sparkle</li>
-        </ul>
-    </div>
+    <header class="hero">
+        <div class="container hero-grid">
+            <div>
+                <span class="badge">Mac app for deeplink workflows</span>
+                <h1>Ship deeplink flows with clarity, speed, and confidence.</h1>
+                <p>DeeplinkScout helps you launch, inspect, and organize deeplinks across simulators and devices. Keep a living library of test cases and share them with your team.</p>
+                <div class="hero-cta">
+                    <a class="btn btn-primary" href="releases/DeeplinkScout-1.0.8.dmg">Download DMG</a>
+                    <a class="btn btn-secondary" href="https://github.com/DominatorVbN/DeeplinkScoutApp/releases/latest">Release notes</a>
+                </div>
+                <p class="note">Requires macOS 14.6+ and Xcode command line tools.</p>
+            </div>
+            <div class="hero-card reveal">
+                <h3>What you can do in seconds</h3>
+                <div class="steps">
+                    <div class="step">
+                        <span class="step-index">01</span>
+                        <div>
+                            <strong>Pick a device</strong>
+                            <p class="note">Simulators or physical devices, all in one list.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-index">02</span>
+                        <div>
+                            <strong>Run deeplinks</strong>
+                            <p class="note">Launch, repeat, and validate instantly.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-index">03</span>
+                        <div>
+                            <strong>Organize collections</strong>
+                            <p class="note">Save workflows, export, and share across teams.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <div>
-        <h2>Requirements</h2>
-        <ul>
-            <li>macOS 14.6 (Sonoma) or later</li>
-            <li>Xcode command line tools</li>
-        </ul>
-    </div>
+    <section id="features" class="section">
+        <div class="container">
+            <h2 class="reveal">Built for real-world deeplink testing</h2>
+            <p class="reveal">From one-off checks to whole suites of deeplinks, DeeplinkScout keeps everything in one window.</p>
+            <div class="grid">
+                <div class="card reveal">
+                    <h3>Collection-first workflow</h3>
+                    <p>Group deeplinks by feature, release, or scenario. Add notes and keep context with each launch.</p>
+                </div>
+                <div class="card reveal">
+                    <h3>Device-ready actions</h3>
+                    <p>Launch deeplinks on booted simulators or attached devices without switching tools.</p>
+                </div>
+                <div class="card reveal">
+                    <h3>Shareable exports</h3>
+                    <p>Move deeplink sets between teammates or machines with a clean export format.</p>
+                </div>
+                <div class="card reveal">
+                    <h3>Fast feedback loop</h3>
+                    <p>Keep your app on track with one-click retesting and quick fixes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div>
-        <h2>Links</h2>
-        <ul>
-            <li><a href="https://github.com/DominatorVbN/DeeplinkScoutApp">Source Code (Private)</a></li>
-            <li><a href="https://github.com/DominatorVbN/DeeplinkScoutApp/releases">Release Notes</a></li>
-        </ul>
-    </div>
+    <section id="screens" class="section">
+        <div class="container">
+            <h2 class="reveal">Peek inside the workspace</h2>
+            <p class="reveal">Curated views from the app, ready to guide your next deeplink session.</p>
+            <div class="screenshot-strip">
+                <div class="screenshot reveal"><img src="assets/screenshots/screenshot-1.png" alt="DeeplinkScout screenshot overview"></div>
+                <div class="screenshot reveal"><img src="assets/screenshots/screenshot-2.png" alt="DeeplinkScout collections"></div>
+                <div class="screenshot reveal"><img src="assets/screenshots/screenshot-3.png" alt="DeeplinkScout details view"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="install" class="section">
+        <div class="container">
+            <h2 class="reveal">Install in minutes</h2>
+            <p class="reveal">Download directly or install via Homebrew.</p>
+            <div class="grid">
+                <div class="callout reveal">
+                    <strong>Direct DMG</strong>
+                    <p class="note">Grab the latest release and start testing instantly.</p>
+                    <a class="btn btn-primary" href="releases/DeeplinkScout-1.0.8.dmg">Download DMG</a>
+                </div>
+                <div class="callout reveal">
+                    <strong>Homebrew</strong>
+                    <p class="note">Install and update from your terminal.</p>
+                    <div class="code-block">brew tap DominatorVbN/DominatorVbN
+brew install deeplinkscout</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="reveal">Help shape the roadmap</h2>
+            <p class="reveal">Feature ideas and issue reports go straight to GitHub so the community can track progress.</p>
+            <div class="grid">
+                <div class="card reveal">
+                    <h3>Request a feature</h3>
+                    <p>Describe your workflow and why it matters. Others can upvote and comment.</p>
+                    <a class="btn btn-secondary" href="features.html">Request features</a>
+                </div>
+                <div class="card reveal">
+                    <h3>Report a bug</h3>
+                    <p>Share steps, expected behavior, and attach screenshots for faster fixes.</p>
+                    <a class="btn btn-secondary" href="report.html">Report issue</a>
+                </div>
+                <div class="card reveal">
+                    <h3>Contact the maintainer</h3>
+                    <p>Have a partnership idea or need help with setup? Reach out directly.</p>
+                    <a class="btn btn-secondary" href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>DeeplinkScout is crafted for teams shipping deeplink-rich apps. Powered by Sparkle auto-updates.</p>
+            <p class="note">Source: <a href="https://github.com/DominatorVbN/DeeplinkScoutApp">DeeplinkScoutApp</a> (private) | <a href="https://github.com/DominatorVbN/DeeplinkScoutDocs">Docs repo</a></p>
+        </div>
+    </footer>
+
+    <script src="assets/app.js"></script>
 </body>
 </html>

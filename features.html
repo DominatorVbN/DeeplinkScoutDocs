@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Requests - DeeplinkScout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container nav-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-badge"></span>
+                DeeplinkScout
+            </a>
+            <div class="nav-links">
+                <a href="index.html#features">Features</a>
+                <a href="index.html#screens">Screens</a>
+                <a href="index.html#install">Install</a>
+                <a href="report.html">Report Issue</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="reveal">Request a feature</h2>
+            <p class="reveal">Share what you want to see next. Feature ideas are posted as GitHub issues so the community can upvote and comment.</p>
+            <div class="grid">
+                <div class="card reveal">
+                    <h3>Upvote existing ideas</h3>
+                    <p>Browse open feature requests and add a thumbs-up reaction to signal priority.</p>
+                    <a class="btn btn-secondary" href="https://github.com/DominatorVbN/DeeplinkScoutDocs/issues?q=is%3Aissue+is%3Aopen+label%3Afeature">View feature requests</a>
+                </div>
+                <div class="card reveal">
+                    <h3>Guidelines</h3>
+                    <p>Explain the workflow, the impact, and any alternatives. The more context, the better.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="callout reveal">
+                    <strong>New feature request</strong>
+                    <p class="note">Submitting will open a pre-filled GitHub issue in a new tab.</p>
+                    <form class="form" data-feature-form>
+                        <label>
+                            Feature title
+                            <input class="input" name="title" placeholder="Add a reusable deeplink template" required>
+                        </label>
+                        <label>
+                            Summary
+                            <textarea name="summary" placeholder="Describe the idea and what it solves"></textarea>
+                        </label>
+                        <label>
+                            Why this matters
+                            <textarea name="impact" placeholder="Impact on your workflow or team"></textarea>
+                        </label>
+                        <label>
+                            Alternatives considered
+                            <textarea name="alternatives" placeholder="Any current workaround or other tools"></textarea>
+                        </label>
+                        <label>
+                            Additional context
+                            <textarea name="context" placeholder="Links, screenshots, or references"></textarea>
+                        </label>
+                        <button class="btn btn-primary" type="submit">Open GitHub issue</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Prefer a quick note instead? Use the contact page for private outreach.</p>
+        </div>
+    </footer>
+
+    <script src="assets/app.js"></script>
+</body>
+</html>

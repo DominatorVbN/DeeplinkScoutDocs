@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report an Issue - DeeplinkScout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container nav-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-badge"></span>
+                DeeplinkScout
+            </a>
+            <div class="nav-links">
+                <a href="index.html#features">Features</a>
+                <a href="index.html#screens">Screens</a>
+                <a href="index.html#install">Install</a>
+                <a href="features.html">Request Features</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="reveal">Report an issue</h2>
+            <p class="reveal">Send a detailed bug report to GitHub. You can attach screenshots once the issue page opens.</p>
+
+            <div class="grid">
+                <div class="card reveal">
+                    <h3>Before you submit</h3>
+                    <p>Check for duplicates and add a thumbs-up reaction if someone already reported it.</p>
+                    <a class="btn btn-secondary" href="https://github.com/DominatorVbN/DeeplinkScoutDocs/issues?q=is%3Aissue+is%3Aopen+label%3Abug">View open issues</a>
+                </div>
+                <div class="card reveal">
+                    <h3>Screenshot support</h3>
+                    <p>Add screenshots in the form below. When GitHub opens, drag and drop the same file into the issue.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="callout reveal">
+                    <strong>New issue report</strong>
+                    <p class="note">Submitting opens a pre-filled GitHub issue. Screenshots must be attached on GitHub.</p>
+                    <form class="form" data-issue-form>
+                        <label>
+                            Issue title
+                            <input class="input" name="title" placeholder="Deeplink launch fails on iOS 17.5" required>
+                        </label>
+                        <label>
+                            Description
+                            <textarea name="description" placeholder="What happened and where?" required></textarea>
+                        </label>
+                        <label>
+                            Steps to reproduce
+                            <textarea name="steps" placeholder="1. Open DeeplinkScout\n2. Select device\n3. Run link"></textarea>
+                        </label>
+                        <label>
+                            Expected result
+                            <textarea name="expected" placeholder="What you expected to happen"></textarea>
+                        </label>
+                        <label>
+                            Actual result
+                            <textarea name="actual" placeholder="What actually happened"></textarea>
+                        </label>
+                        <label>
+                            Environment
+                            <textarea name="environment" placeholder="macOS version, device, DeeplinkScout version"></textarea>
+                        </label>
+                        <label>
+                            Add a screenshot (optional)
+                            <input class="input" type="file" accept="image/*">
+                        </label>
+                        <div class="preview-box" data-preview>No screenshot selected.</div>
+                        <button class="btn btn-primary" type="submit">Open GitHub issue</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="callout reveal">
+                    <strong>Copy issue template</strong>
+                    <p class="note">Paste this into GitHub if you prefer manual submission.</p>
+                    <textarea id="issue-template" class="input" readonly>## Description
+
+## Steps to reproduce
+
+## Expected result
+
+## Actual result
+
+## Environment
+
+## Screenshots
+(attach files here)
+</textarea>
+                    <button class="btn btn-secondary" type="button" data-copy="issue-template">Copy</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Thanks for helping improve DeeplinkScout.</p>
+        </div>
+    </footer>
+
+    <script src="assets/app.js"></script>
+</body>
+</html>

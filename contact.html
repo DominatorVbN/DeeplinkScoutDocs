@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - DeeplinkScout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container nav-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-badge"></span>
+                DeeplinkScout
+            </a>
+            <div class="nav-links">
+                <a href="index.html#features">Features</a>
+                <a href="index.html#screens">Screens</a>
+                <a href="index.html#install">Install</a>
+                <a href="features.html">Request Features</a>
+                <a href="report.html">Report Issue</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="reveal">Contact the maintainer</h2>
+            <p class="reveal">Have a partnership idea, feedback, or onboarding question? Reach out here.</p>
+
+            <div class="grid">
+                <div class="card reveal">
+                    <h3>GitHub profile</h3>
+                    <p>Follow updates and connect on GitHub.</p>
+                    <a class="btn btn-secondary" href="https://github.com/DominatorVbN">Visit @DominatorVbN</a>
+                </div>
+                <div class="card reveal">
+                    <h3>Docs repo</h3>
+                    <p>Track docs updates, releases, and public issues.</p>
+                    <a class="btn btn-secondary" href="https://github.com/DominatorVbN/DeeplinkScoutDocs">Open repository</a>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="callout reveal">
+                    <strong>Send a message</strong>
+                    <p class="note">This will open a GitHub issue labeled as a question. Share how you want to be contacted.</p>
+                    <form class="form" data-contact-form>
+                        <label>
+                            Subject
+                            <input class="input" name="subject" placeholder="Partnership inquiry" required>
+                        </label>
+                        <label>
+                            Your message
+                            <textarea name="message" placeholder="Tell us how we can help" required></textarea>
+                        </label>
+                        <label>
+                            Preferred reply
+                            <input class="input" name="contact" placeholder="Email or handle">
+                        </label>
+                        <button class="btn btn-primary" type="submit">Open GitHub message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Thanks for supporting DeeplinkScout.</p>
+        </div>
+    </footer>
+
+    <script src="assets/app.js"></script>
+</body>
+</html>
