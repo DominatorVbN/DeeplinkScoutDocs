@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Release Notes - DeeplinkScout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container nav-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-badge"><img src="assets/app-icon.png" alt="DeeplinkScout app icon"></span>
+                DeeplinkScout
+            </a>
+            <div class="nav-links">
+                <a href="index.html#features">Features</a>
+                <a href="index.html#screens">Screens</a>
+                <a href="index.html#install">Install</a>
+                <a href="features.html">Request Features</a>
+                <a href="report.html">Report Issue</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="reveal">Release notes</h2>
+            <p class="reveal">Latest releases pulled directly from GitHub.</p>
+
+            <div class="callout reveal">
+                <strong>Latest DMG</strong>
+                <p class="note">Grab the newest release from GitHub or browse the full list below.</p>
+                <a class="btn btn-primary" href="https://github.com/DominatorVbN/DeeplinkScoutApp/releases/latest">Open latest release</a>
+            </div>
+
+            <div class="section">
+                <div id="release-status" class="note reveal">Loading releases...</div>
+                <div id="release-list" class="release-list reveal"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Want to discuss a release? Add a comment on the GitHub release page.</p>
+        </div>
+    </footer>
+
+    <script src="assets/app.js"></script>
+    <script>
+        const statusEl = document.getElementById("release-status");
+        const listEl = document.getElementById("release-list");
+
+        async function loadReleases() {
+            try {
+                const response = await fetch("https://api.github.com/repos/DominatorVbN/DeeplinkScoutApp/releases", {
+                    headers: {
+                        Accept: "application/vnd.github+json",
+                    },
+                });
+
+                if (!response.ok) {
+                    throw new Error("Failed to load releases");
+                }
+
+                const releases = await response.json();
+                if (!Array.isArray(releases) || releases.length === 0) {
+                    statusEl.textContent = "No releases found yet.";
+                    return;
+                }
+
+                statusEl.textContent = "";
+                listEl.innerHTML = "";
+
+                releases.slice(0, 8).forEach((release) => {
+                    const item = document.createElement("div");
+                    item.className = "release-item";
+
+                    const title = document.createElement("h3");
+                    title.textContent = release.name || release.tag_name;
+
+                    const meta = document.createElement("div");
+                    const date = release.published_at
+                        ? new Date(release.published_at).toLocaleDateString(undefined, {
+                              year: "numeric",
+                              month: "short",
+                              day: "numeric",
+                          })
+                        : "";
+                    meta.className = "release-meta";
+                    meta.textContent = `Version ${release.tag_name || ""}${date ? ` • ${date}` : ""}`;
+
+                    const body = document.createElement("div");
+                    body.className = "release-body";
+                    body.textContent = release.body || "Release notes coming soon.";
+
+                    const link = document.createElement("a");
+                    link.className = "btn btn-secondary";
+                    link.href = release.html_url;
+                    link.textContent = "View on GitHub";
+
+                    item.appendChild(title);
+                    item.appendChild(meta);
+                    item.appendChild(body);
+                    item.appendChild(link);
+                    listEl.appendChild(item);
+                });
+            } catch (error) {
+                statusEl.textContent = "Unable to load releases right now. Visit GitHub for the full list.";
+                const fallback = document.createElement("a");
+                fallback.className = "btn btn-secondary";
+                fallback.href = "https://github.com/DominatorVbN/DeeplinkScoutApp/releases";
+                fallback.textContent = "Open GitHub releases";
+                listEl.appendChild(fallback);
+            }
+        }
+
+        loadReleases();
+    </script>
+</body>
+</html>

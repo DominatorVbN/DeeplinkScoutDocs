@@ -29,4 +29,4 @@ Download the latest DMG from [Releases](https://github.com/DominatorVbN/Deeplink
 
 ## Website
 
-Visit [https://dominatorvbn.github.io/DeeplinkScoutDocs/](https://dominatorvbn.github.io/DeeplinkScoutDocs/) for more information, including feature requests, issue reporting, and the creator page.
+Visit [https://dominatorvbn.github.io/DeeplinkScoutDocs/](https://dominatorvbn.github.io/DeeplinkScoutDocs/) for more information, including feature requests, issue reporting, release notes, and the creator page.
