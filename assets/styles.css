@@ -81,6 +81,15 @@ nav {
     box-shadow: var(--glow);
 }
 
+.app-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: var(--shadow);
+    margin-bottom: 14px;
+}
+
 .nav-links {
     display: flex;
     gap: 18px;
@@ -149,6 +158,17 @@ nav {
     box-shadow: var(--glow);
 }
 
+.btn-apple {
+    background: #0f0f12;
+    color: #f8fafc;
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.btn-apple svg {
+    width: 18px;
+    height: 18px;
+}
+
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 20px 40px rgba(110, 231, 255, 0.35);
@@ -167,6 +187,19 @@ nav {
     padding: 26px;
     box-shadow: var(--shadow);
     position: relative;
+}
+
+.hero-media {
+    margin-top: 40px;
+    display: grid;
+    gap: 24px;
+}
+
+.screenshot-hero {
+    border-radius: calc(var(--radius) + 6px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
 }
 
 .hero-card::before,

@@ -7,8 +7,8 @@ Documentation and downloads for DeeplinkScout.
 ### Homebrew
 
 ```bash
-brew tap DominatorVbN/DominatorVbN
-brew install deeplinkscout
+brew tap DominatorVbN/DeeplinkScout
+brew install DeeplinkScout
 ```
 
 ### Direct Download
@@ -29,4 +29,4 @@ Download the latest DMG from [Releases](https://github.com/DominatorVbN/Deeplink
 
 ## Website
 
-Visit [https://dominatorvbn.github.io/DeeplinkScoutDocs/](https://dominatorvbn.github.io/DeeplinkScoutDocs/) for more information.
+Visit [https://dominatorvbn.github.io/DeeplinkScoutDocs/](https://dominatorvbn.github.io/DeeplinkScoutDocs/) for more information, including feature requests, issue reporting, and the creator page.
