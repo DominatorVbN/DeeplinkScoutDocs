@@ -20,10 +20,8 @@
                 <a href="index.html#features">Features</a>
                 <a href="index.html#screens">Screens</a>
                 <a href="index.html#install">Install</a>
-                <a href="features.html">Request Features</a>
-                <a href="report.html">Report Issue</a>
                 <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="support.html">Support</a>
             </div>
         </div>
     </nav>
@@ -59,13 +57,20 @@
 
         async function loadReleases() {
             try {
-                const response = await fetch("https://api.github.com/repos/DominatorVbN/DeeplinkScoutApp/releases", {
+                const response = await fetch("https://api.github.com/repos/DominatorVbN/DeeplinkScoutApp/releases?per_page=8", {
                     headers: {
                         Accept: "application/vnd.github+json",
                     },
                 });
 
                 if (!response.ok) {
+                    const remaining = response.headers.get("X-RateLimit-Remaining");
+                    if (remaining === "0") {
+                        throw new Error("rate-limit");
+                    }
+                    if (response.status === 404) {
+                        throw new Error("not-found");
+                    }
                     throw new Error("Failed to load releases");
                 }
 
@@ -112,7 +117,13 @@
                     listEl.appendChild(item);
                 });
             } catch (error) {
-                statusEl.textContent = "Unable to load releases right now. Visit GitHub for the full list.";
+                if (error.message === "rate-limit") {
+                    statusEl.textContent = "GitHub rate limit reached. Please try again in a bit or open the releases page.";
+                } else if (error.message === "not-found") {
+                    statusEl.textContent = "Release notes are private right now. Please open the GitHub releases page with access.";
+                } else {
+                    statusEl.textContent = "Unable to load releases right now. Visit GitHub for the full list.";
+                }
                 const fallback = document.createElement("a");
                 fallback.className = "btn btn-secondary";
                 fallback.href = "https://github.com/DominatorVbN/DeeplinkScoutApp/releases";
