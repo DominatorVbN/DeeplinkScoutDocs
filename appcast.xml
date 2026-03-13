@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>DeeplinkScout Updates</title>
+    <link>https://dominatorvbn.github.io/DeeplinkScoutDocs/appcast.xml</link>
+    <description>Most recent updates to DeeplinkScout</description>
+    <language>en</language>
+    <!-- This file will be automatically updated by the release workflow -->
+  </channel>
+</rss>
