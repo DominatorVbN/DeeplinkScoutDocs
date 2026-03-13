@@ -57,17 +57,9 @@
 
         async function loadReleases() {
             try {
-                const response = await fetch("https://api.github.com/repos/DominatorVbN/DeeplinkScoutDocs/releases?per_page=8", {
-                    headers: {
-                        Accept: "application/vnd.github+json",
-                    },
-                });
+                const response = await fetch("assets/releases.json");
 
                 if (!response.ok) {
-                    const remaining = response.headers.get("X-RateLimit-Remaining");
-                    if (remaining === "0") {
-                        throw new Error("rate-limit");
-                    }
                     throw new Error("Failed to load releases");
                 }
 
@@ -114,11 +106,7 @@
                     listEl.appendChild(item);
                 });
             } catch (error) {
-                if (error.message === "rate-limit") {
-                    statusEl.textContent = "GitHub rate limit reached. Please try again in a bit or open the releases page.";
-                } else {
-                    statusEl.textContent = "Unable to load releases right now. Visit GitHub for the full list.";
-                }
+                statusEl.textContent = "Unable to load releases right now. Visit GitHub for the full list.";
                 const fallback = document.createElement("a");
                 fallback.className = "btn btn-secondary";
                 fallback.href = "https://github.com/DominatorVbN/DeeplinkScoutDocs/releases";
