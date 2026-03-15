@@ -4,11 +4,11 @@
         <title>DeeplinkScout</title>
         <item>
             <title>1.0</title>
-            <pubDate>Fri, 13 Mar 2026 12:58:00 +0000</pubDate>
+            <pubDate>Sun, 15 Mar 2026 17:43:16 +0000</pubDate>
             <sparkle:version>4</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion>
-            <enclosure url="https://raw.githubusercontent.com/DominatorVbN/DeeplinkScoutDocs/main/releases/DeeplinkScout-1.0.8.dmg" length="5650827" type="application/octet-stream" sparkle:edSignature="S6hACPjZxzVWaPLPjhNsS+S03wu6G7B7qNyPQPwR2diOhT5uxHdbgoNHpWmdvChvCP/i4A7si9vZ4cphti3WAQ=="/>
+            <enclosure url="https://raw.githubusercontent.com/DominatorVbN/DeeplinkScoutDocs/main/releases/DeeplinkScout-1.0.9.dmg" length="5758913" type="application/octet-stream" sparkle:edSignature="Y48/TePpoLO/aCbuFRXZjiuXFV2Vp4X/2aYjyhlwMg0TbNxPPCdW9k+Sf2b0kicI20srVWegtL1uOsjP8bCfAQ=="/>
         </item>
     </channel>
 </rss>
